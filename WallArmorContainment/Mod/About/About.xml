@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+    <name>Wall Armor Containment</name>
+    <author>Gensando</author>
+    <packageId>Gensando.WallArmorContainment</packageId>
+    <description>Small Patch that adds Wall Armor's HP from "ReBuild" mod into entity holder containment strength calculation</description>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+            <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+        </li>
+        <li>
+            <packageId>Ludeon.RimWorld.Anomaly</packageId>
+            <displayName>Anomaly</displayName>
+        </li>
+        <li>
+            <packageId>ReBuild.COTR.DoorsAndCorners</packageId>
+            <displayName>ReBuild</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3262718980</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Anomaly</li>
+        <li>ReBuild.COTR.DoorsAndCorners</li>
+    </loadAfter>
+</ModMetaData>

@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{5F1D8C6D-E127-4001-A575-E56D99DF271F}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>WallArmorContainment</RootNamespace>
+        <AssemblyName>WallArmorContainment</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>..\Mod\1.5\Assemblies</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>..\Mod\1.5\Assemblies</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="0Harmony, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\..\packages\Lib.Harmony.2.3.3\lib\net48\0Harmony.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp-firstpass">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\Assembly-CSharp-firstpass.dll</HintPath>
+        </Reference>
+        <Reference Include="com.rlabrecque.steamworks.net">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\com.rlabrecque.steamworks.net.dll</HintPath>
+        </Reference>
+        <Reference Include="HugsLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\..\packages\UnlimitedHugs.Rimworld.HugsLib.11.0.3\lib\net472\HugsLib.dll</HintPath>
+        </Reference>
+        <Reference Include="ISharpZipLib">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\ISharpZipLib.dll</HintPath>
+        </Reference>
+        <Reference Include="Mono.Posix">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\Mono.Posix.dll</HintPath>
+        </Reference>
+        <Reference Include="Mono.Security">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\Mono.Security.dll</HintPath>
+        </Reference>
+        <Reference Include="mscorlib">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\mscorlib.dll</HintPath>
+        </Reference>
+        <Reference Include="NAudio">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\NAudio.dll</HintPath>
+        </Reference>
+        <Reference Include="NVorbis">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\NVorbis.dll</HintPath>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.ComponentModel.Composition">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\System.ComponentModel.Composition.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Configuration">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\System.Configuration.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Runtime">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\System.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime.Serialization">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\System.Runtime.Serialization.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Security">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\System.Security.dll</HintPath>
+        </Reference>
+        <Reference Include="System.ServiceModel.Internals">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\System.ServiceModel.Internals.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xml.Linq">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\System.Xml.Linq.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Burst">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\Unity.Burst.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Burst.Unsafe">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\Unity.Burst.Unsafe.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Mathematics">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\Unity.Mathematics.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.MemoryProfiler">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\Unity.MemoryProfiler.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.TextMeshPro">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\Unity.TextMeshPro.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AccessibilityModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.AccessibilityModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AIModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.AIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AndroidJNIModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.AndroidJNIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AnimationModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.AnimationModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ARModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.ARModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AssetBundleModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.AssetBundleModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AudioModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.AudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ClothModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.ClothModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ClusterInputModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.ClusterInputModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ClusterRendererModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.ClusterRendererModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CrashReportingModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.CrashReportingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.DirectorModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.DirectorModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.DSPGraphModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.DSPGraphModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.GameCenterModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.GameCenterModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.GridModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.GridModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.HotReloadModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.HotReloadModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ImageConversionModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.ImageConversionModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.IMGUIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.InputLegacyModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.InputModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.JSONSerializeModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.JSONSerializeModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.LocalizationModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.LocalizationModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ParticleSystemModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.ParticleSystemModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PerformanceReportingModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.PerformanceReportingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.Physics2DModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.Physics2DModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PhysicsModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.PhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ProfilerModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.ProfilerModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ScreenCaptureModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.ScreenCaptureModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SharedInternalsModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.SharedInternalsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SpriteMaskModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.SpriteMaskModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SpriteShapeModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.SpriteShapeModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.StreamingModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.StreamingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SubstanceModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.SubstanceModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SubsystemsModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.SubsystemsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TerrainModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.TerrainModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TerrainPhysicsModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextCoreModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.TextCoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.TextRenderingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TilemapModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.TilemapModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TLSModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.TLSModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIElementsModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UIElementsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UmbraModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UmbraModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UNETModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UNETModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityAnalyticsModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityConnectModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UnityConnectModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityTestProtocolModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UnityWebRequestModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VehiclesModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.VehiclesModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VFXModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.VFXModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VideoModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.VideoModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VRModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.VRModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.WindModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.WindModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.XRModule">
+          <HintPath>..\..\packages\Krafs.Rimworld.Ref.1.5.4104\ref\net48\UnityEngine.XRModule.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="WallArmorContainment.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="packages.config" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+    <ItemDefinitionGroup>
+        <Reference>
+            <Private>False</Private>
+        </Reference>
+        <ProjectReference>
+            <Private>False</Private>
+        </ProjectReference>
+        <PackageReference>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+    </ItemDefinitionGroup>
+
+</Project>
